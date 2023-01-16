@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <h3 class="mb-3">
+                Thanks you for registering
+            </h3>
+            <div class="form-group" *ngIf="authService.userData as user">
+                <p>We have sent a confirmation email to {{user.email}}</p>
+                 <p>Please check your email and click to the link to verify your email address.</p>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary mt-1 ms-1" (click)="sendVerificationEmail()">
+                    Resend verification email
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
